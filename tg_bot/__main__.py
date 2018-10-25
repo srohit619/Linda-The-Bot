@@ -19,11 +19,11 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi {}, my name is {}! If you have any questions on how to use me, read /help for More Detail.
+Hi {}, my name is {}!
 
-I'm a group manager bot maintained by this [](tg://user?id={}). I'm built in python3, using the \
+I'm a group manager bot maintained by this [Tech lover](tg://user?id={}). I'm built in python3, using the \
 python-telegram-bot library, and am fully opensource - you can find what makes me tick \
-[here](github.com/srohit619/tgbot)! Here is the Main Source [here](github.com/PaulSonOfLars/tgbot).
+[here](github.com/srohit619/tgbot)! Here is the Link to [Main Source](github.com/PaulSonOfLars/tgbot).
 
 You can find the list of available commands with /help.
 
