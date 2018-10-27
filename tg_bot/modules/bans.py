@@ -28,7 +28,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("First reffer a User.")
+        message.reply_text("First refer a User.")
         return ""
 
     try:
@@ -91,7 +91,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("First reffer a User.")
+        message.reply_text("First refer a User.")
         return ""
 
     try:
@@ -179,7 +179,7 @@ def kick(bot: Bot, update: Update, args: List[str]) -> str:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("First reffer a user")
+            message.reply_text("First refer a user")
             return ""
         else:
             raise
