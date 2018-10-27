@@ -21,17 +21,16 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hi {}, my name is {}!
 
-I'm a group manager bot maintained by this [Tech lover](tg://user?id={}). I'm built in python3, using the \
-python-telegram-bot library, and am fully opensource - you can find what makes me tick \
-[here](github.com/srohit619/tgbot)! Here is the Link to [Main Source](github.com/PaulSonOfLars/tgbot).
+I'm a group manager bot maintained by [Rohit Shetty](tg://user?id={}). I'm built in python3, using the \
+python-telegram-bot library, and am fully OpenSource [Check Here](github.com/srohit619/tgbot)!
 
-You can find the list of available commands with /help.
+Just type /help to get list of all available commands.
 
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
+I'm a modular group management bot with some extras Commands! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
@@ -47,11 +46,11 @@ the things I can help you with.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
-motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
-(see his bio!). He's just a poor student, so every little helps!
-There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+DONATE_STRING = """Hey, glad to hear you want to donate!
+Just Ping [Him](t.me/therohitshetty) to get More Detail, and every donation helps \
+motivate him to make me even better. All the donation money goes to the VPS to host me.
+Its Not Easy To Maintain A Bot, so Every little helps!
+Pay Via Paypal; [PayPal](paypal.me/therohitshetty)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
