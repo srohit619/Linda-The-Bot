@@ -19,7 +19,7 @@ def sudopromote(bot: Bot, update: Update, args: List[str]):
     user_id = extract_user(message, args)
     
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("Refer a user first....")
         return ""
         
     if int(user_id) == OWNER_ID:
@@ -27,7 +27,7 @@ def sudopromote(bot: Bot, update: Update, args: List[str]):
         return ""
         
     if int(user_id) in SUDO_USERS:
-        message.reply_text("The user is already a sudo user.")
+        message.reply_text("Buddy this user is already a sudo user.")
         return ""
     
     with open("sudo_users.txt","a") as file:
@@ -45,7 +45,7 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
     user_id = extract_user(message, args)
     
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("Refer the user first.")
         return ""
 
     if int(user_id) == OWNER_ID:
@@ -64,7 +64,7 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
                 file.write(str(user) + "\n")
 
     SUDO_USERS.remove(user_id)
-    message.reply_text("Succefully removed from SUDO user list!")
+    message.reply_text("Yep Succefully removed from SUDO user list!")
     
     return ""
 
