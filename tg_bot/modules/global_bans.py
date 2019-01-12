@@ -96,7 +96,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
     banner = update.effective_user  # type: Optional[User]
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
                  "{} is gbanning user {} "
-                 "because:\n{}".format(mention_html(banner.id, banner.first_name),
+                 "Reason:\n{}".format(mention_html(banner.id, banner.first_name),
                                        mention_html(user_chat.id, user_chat.first_name), reason or "No reason given"),
                  html=True)
 
@@ -123,8 +123,8 @@ def gban(bot: Bot, update: Update, args: List[str]):
         except TelegramError:
             pass
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gban complete!")
-    message.reply_text("Person has been gbanned.")
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "Gbanned 😅!")
+    message.reply_text("The User Is Now Gbanned 😒!!!.")
 
 
 @run_async
@@ -142,12 +142,12 @@ def ungban(bot: Bot, update: Update, args: List[str]):
         return
 
     if not sql.is_user_gbanned(user_id):
-        message.reply_text("This user is not gbanned!")
+        message.reply_text("This user is not Gbanned!")
         return
 
     banner = update.effective_user  # type: Optional[User]
 
-    message.reply_text("OK I'll give {} a second chance, globally.".format(user_chat.first_name))
+    message.reply_text("OK I'll give {} a second chance, Globally.".format(user_chat.first_name))
 
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
                  "{} has ungbanned user {}".format(mention_html(banner.id, banner.first_name),
@@ -179,9 +179,9 @@ def ungban(bot: Bot, update: Update, args: List[str]):
 
     sql.ungban_user(user_id)
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gban complete!")
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "Un-Gban Complete! 😊")
 
-    message.reply_text("Person has been un-gbanned.")
+    message.reply_text("This User Is Now Un-Gbanned.")
 
 
 @run_async
@@ -201,7 +201,7 @@ def gbanlist(bot: Bot, update: Update):
     with BytesIO(str.encode(banfile)) as output:
         output.name = "gbanlist.txt"
         update.effective_message.reply_document(document=output, filename="gbanlist.txt",
-                                                caption="Here is the list of currently gbanned users.")
+                                                caption="Here is the list of currently Gbanned users.")
 
 
 def check_and_ban(update, user_id, should_message=True):
