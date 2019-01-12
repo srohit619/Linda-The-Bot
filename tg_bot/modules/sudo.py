@@ -34,7 +34,7 @@ def sudopromote(bot: Bot, update: Update, args: List[str]):
         file.write(str(user_id) + "\n")
     
     SUDO_USERS.append(user_id)
-    message.reply_text("Succefully added to SUDO user list!")
+    message.reply_text("Succefully Added To SUDO List!")
         
     return ""
 
@@ -64,7 +64,7 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
                 file.write(str(user) + "\n")
 
     SUDO_USERS.remove(user_id)
-    message.reply_text("Yep Succefully removed from SUDO user list!")
+    message.reply_text("Yep Succefully removed from SUDO List!")
     
     return ""
 
